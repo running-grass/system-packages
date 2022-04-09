@@ -196,7 +196,7 @@
              (search . ,(if (executable-find "eix")
                             "eix"
                           "emerge -S"))
-             (uninstall . "emerge -C")
+             (uninstall . "emerge --depclean")
              (update . "emerge -u world")
              (clean-cache . "eclean distfiles")
              (log . "cat /var/log/portage")
