@@ -71,10 +71,10 @@
     ;; nix
     (nix .
          ((default-sudo . nil)
-          (install . "nix-env -i")
-          (search . "nix search")
-          (uninstall . "nix-env -e")
-          (update . "nix-env -u")
+          (install . "nix profile install nixpkgs#%p")
+          (search . "nix search nixpkgs#%p")
+          (uninstall . nil)
+          (update . nil)
           (clean-cache . "nix-collect-garbage")
           (log . nil)
           (get-info . nil)
@@ -83,8 +83,8 @@
           (verify-all-packages . nil)
           (verify-all-dependencies . nil)
           (remove-orphaned . nil)
-          (list-installed-packages . "nix-env -q")
-          (list-installed-packages-all . "nix-env -q")
+          (list-installed-packages . "nix profile list")
+          (list-installed-packages-all . "nix profile list")
           (list-dependencies-of . nil)
           (noconfirm . nil)))
     ;; Mac
